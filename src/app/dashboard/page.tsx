@@ -76,8 +76,8 @@ export default function DashboardPage() {
 
       await fetchTasks();
       toast.success("¡Tareas priorizadas por IA!");
-    } catch {
-      toast.error("Error al priorizar tareas");
+    } catch (error) {
+      console.error("Error:", error);
     } finally {
       setPrioritizing(false);
     }
